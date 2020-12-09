@@ -10,13 +10,11 @@ function App() {
       <BrowserRouter>
         <div>
           <Header />
-
+          <Route path="/" exact component={Homepage} />
           <Switch>
-            <Route path="/" exact component={Homepage} />
             <Route path="/courses/:id" component={CourseDetails} />
             <Route path="/courses" component={Courses} />
           </Switch>
-
         </div>
       </BrowserRouter>
     </div>
