@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { API } from "../api";
 import { Card } from "react-bootstrap";
 
-const Courses = (props) => {
+const Courses = () => {
 
     const [courses, setCourses] = useState([]);
 
@@ -15,16 +15,10 @@ const Courses = (props) => {
                 .then((response) => {
                     if (response.ok) {
                         return response.json();
-                    } else {
-                        throw new Error("Something went wrong...");
                     }
                 })
                 .then((data) => {
-                    console.log(data);
                     setCourses(data);
-                })
-                .catch((error) => {
-                    console.log(error);
                 });
         };
         fetchData();
@@ -46,7 +40,7 @@ const Courses = (props) => {
                                     <Button style={{ background: '#F15B41' }}>
                                         <Link style={{ textDecoration: "none", color: '#fff' }}
                                             to={{ pathname: `/courses/${cour.id}` }}>
-                                            Learn more{" "}
+                                            Learn more
                                         </Link>
                                     </Button>
                                 </Card.Body>

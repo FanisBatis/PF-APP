@@ -42,25 +42,43 @@
       "description": "<p>This <strong>innovative Scrum class</strong> won’t be like any other you’ve heard of, with an unconventional focus on the deeply human foundations at work in teams building stuff together.</p><p>This two-day seminar is designed to give aspiring and beginning ScrumMasters and team members the foundations of Scrum and Agile practice. Chock full of exercises, the seminar creates lasting memories and learnings you can carry through into your team so you can avoid common Agile pitfalls. The seminar is designed and taught by <strong>Jim Coplien</strong>, <strong>author of Organizational Patterns and Lean/Agile Process and Architecture Coach</strong>.</p>"
     },
     {
+      "id": "02",
+      "title": "User eXperience (UX) Research",
+      "imagePath": "/ui-ux.png",
+      "price": {
+        "normal": 500,
+        "early_bird": 450
+      },
+      "dates": {
+        "start_date": "2020-10-05",
+        "end_date": "2020-10-27"
+      },
+      "duration": "4 Fridays and 4 Saturdays",
+      "open": true,
+      "instructors": [
+        "01",
+        "02"
+      ],
+      "description": "<p>Do you want to <strong>design products based on opinions or based on evidence</strong>?</p><p>In this course you will learn how <strong>UX research</strong> builds products that users really need, can and want to use!</p>"
+    },
+    {
       "id": "03",
       "title": "Angular",
-      "duration": "2 Wednesdays and 3 Saturdays",
       "imagePath": "/angular.png",
-      "description": "<p>This code.learn program&nbsp;covers introductory and advanced <strong>Angular</strong> topics through extensive hands-on sessions and guidance from senior developers.</p>",
       "price": {
-        "normal": "4500",
+        "normal": 450,
         "early_bird": 400
       },
       "dates": {
         "start_date": "2020-10-12",
         "end_date": "2020-10-18"
       },
-      "open": {
-        "open": false
-      },
+      "duration": "2 Wednesdays and 3 Saturdays",
+      "open": true,
       "instructors": [
         "02"
-      ]
+      ],
+      "description": "<p>This code.learn program&nbsp;covers introductory and advanced <strong>Angular</strong> topics through extensive hands-on sessions and guidance from senior developers.</p>"
     },
     {
       "id": "04",

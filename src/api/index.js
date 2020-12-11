@@ -1,3 +1,3 @@
-const API_BASE_URL = "http://localhost:3001";
+const API_URL = "http://localhost:3001";
 
-export const API = `${API_BASE_URL}/`;
+export const API = `${API_URL}/`;
