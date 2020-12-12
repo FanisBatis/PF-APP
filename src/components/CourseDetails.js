@@ -1,13 +1,131 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { useParams, Link } from "react-router-dom";
+import { API } from "../api";
+import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
+
 
 function CourseDetails() {
-  
+  const [course, setCourse] = useState([]);
+  const [instructor, setInstructor] = useState([]);
+  const courseId = useParams();
+  const [show, setShow] = useState();
+  const handleClose = () => setShow();
+  const handleShow = () => setShow(true);
+
+  const deleteCourse = () => {
+    fetch(API + "courses/" + courseId.id, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        console.log("Course deleted!!!");
+      });
+      
+  };
+
+  useEffect(() => {
+    const fetchData = () => {
+      fetch(API + "courses/" + courseId.id)
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+        })
+        .then((data) => {
+          var instr = [];
+          instr = data.instructors;
+          var instructorParams = "?";
+          instr.forEach(function (e) {
+            instructorParams = instructorParams + "id=" + e.toString() + "&";
+          });
+          setCourse(data);
+          const fetchInstructors = () => {
+            fetch(API + "instructors/" + instructorParams)
+              .then((response) => {
+                if (response.ok) {
+                  return response.json();
+                }
+              })
+              .then((data) => {
+                setInstructor(data);
+              });
+          };
+          fetchInstructors();
+        });
+    };
+    fetchData();
+  }, []);
   return (
-   
-        <Container>
-         Course details
-        </Container>
+    <div style={{ textAlign: "center", marginTop: "20px" }}>
+      <Container>
+        <Row>
+          <Col>
+            <img src={course.imagePath} />
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "20px" }}>
+          <Col>
+            <h1 className="color-text">{course.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: course.description }}></div>
+            <div className="color-text">Duration: {course.duration}</div>
+            <div className="color-text">
+              Dates: {course.dates?.start_date} to {course.dates?.end_date}
+            </div>
+            <div className="color-text">
+              Early bird: {course.price?.early_bird} €
+              </div>
+            <div className="color-text">Normal: {course.price?.normal} €</div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h2 style={{ marginTop: "20px" }}>Instructor</h2>
+          </Col>
+        </Row>
+        <Row>
+          {instructor.map((inst) =>
+            <Col className="border-0">
+              <Card body key={inst.id}>
+                <Card.Title className="color-text" tag="h5">{inst.name?.first} {inst.name?.last}</Card.Title>
+                <Card.Text>
+                  {inst.bio}
+                </Card.Text>
+                <Card.Text>
+                  Email: {inst.email}
+                </Card.Text>
+                <Card.Text>
+                  Birthday: {inst.dob}
+                </Card.Text>
+                <a href="https://www.linkedin.com/sample" target="_blank">LinkedIn</a>
+              </Card>
+            </Col>
+          )}
+        </Row>
+        <Row style={{ marginBottom: '30px', marginTop: '30px' }}>
+          <Col>
+            <Button onClick={handleShow} style={{ background: "red", width: '80px', marginRight: '5px' }}>
+              Delete
+              </Button>
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Delete {course.title} course?</Modal.Title>
+              </Modal.Header>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>Cancel</Button>
+                <Button variant="primary" onClick={deleteCourse}><Link to='/courses' style={{ color: "white" ,textDecoration:"none" }}>OK!</Link></Button>
+              </Modal.Footer>
+            </Modal>
+            <Button style={{ background: "green", width: '80px' }}>
+              <Link to={{ pathname: `/edit-course/${course.id}` }} style={{ color: "#fff" }}>Edit</Link>
+            </Button>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
