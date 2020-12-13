@@ -24,7 +24,7 @@ function CourseDetails() {
       .then((data) => {
         console.log("Course deleted!!!");
       });
-      
+
   };
 
   useEffect(() => {
@@ -83,14 +83,14 @@ function CourseDetails() {
         </Row>
         <Row>
           <Col>
-            <h2 style={{ marginTop: "20px" }}>Instructor</h2>
+            <h2 style={{ marginTop: "30px" }}>Instructor</h2>
           </Col>
         </Row>
         <Row>
           {instructor.map((inst) =>
-            <Col className="border-0">
-              <Card body key={inst.id}>
-                <Card.Title className="color-text" tag="h5">{inst.name?.first} {inst.name?.last}</Card.Title>
+            <Col>
+              <Card body key={inst.id} border="white">
+                <Card.Title>{inst.name?.first} {inst.name?.last}</Card.Title>
                 <Card.Text>
                   {inst.bio}
                 </Card.Text>
@@ -116,7 +116,7 @@ function CourseDetails() {
               </Modal.Header>
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>Cancel</Button>
-                <Button variant="primary" onClick={deleteCourse}><Link to='/courses' style={{ color: "white" ,textDecoration:"none" }}>OK!</Link></Button>
+                <Button variant="primary" onClick={deleteCourse}><Link to='/courses' style={{ color: "white", textDecoration: "none" }}>OK!</Link></Button>
               </Modal.Footer>
             </Modal>
             <Button style={{ background: "green", width: '80px' }}>

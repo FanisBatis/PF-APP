@@ -9,7 +9,6 @@ const Homepage = () => {
         <h1>Welcome to Code.Hub Dashboard!</h1>
         <h5>Manage everything and have fun!</h5>
       </Jumbotron>
-
       <Stats />
     </div>
   )
