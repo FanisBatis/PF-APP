@@ -6,7 +6,8 @@ import Courses from "./Courses";
 import CourseDetails from "./CourseDetails";
 import Dashboard from "./Dashboard";
 import AddCourse from "./AddCourse";
-import Header from "./Header"
+import Header from "./Header";
+import EditCourse from "./EditCourse";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/courses" component={Courses} />
                   </Switch>
               <Route path="/addcourse" component={AddCourse} />
+              <Route path="/edit-course" component={EditCourse} />
             </div>
           </Switch>
       </Fade>
