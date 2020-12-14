@@ -1,8 +1,6 @@
 import React from "react";
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import Container from 'react-bootstrap/Container';
 import { Link } from "react-router-dom";
+import { Navbar , Nav } from 'react-bootstrap';
 
 
 
@@ -14,8 +12,8 @@ const Header = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto"></Nav>
         <Nav>
-          <Nav.Link href="courses">Courses</Nav.Link>
-          <Nav.Link>Add courses</Nav.Link>
+          <Nav.Link>  <Link to='/courses' style={{ textDecoration:'none' , color: "white"  }}>Courses</Link></Nav.Link>
+          <Nav.Link>  <Link to='/addcourse' style={{ textDecoration:'none' , color: "white"  }}>Add Course</Link></Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
