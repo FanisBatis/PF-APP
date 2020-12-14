@@ -10,7 +10,6 @@ const EditCourse = () => {
     const [title, setTitle] = useState("");
     const [imagePath, setImagePath] = useState("");
     const [duration, setDuration] = useState("");
-    //const [open, setOpen] = useState(false);
     const [instructors, setInstructors] = useState([]);
     const [description, setDescription] = useState("");
     const [priceNormal, setPriceNormal] = useState("");
