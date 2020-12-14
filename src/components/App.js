@@ -1,25 +1,32 @@
-import Header from "./Header"
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {Fade} from 'react-bootstrap';
 import Courses from "./Courses";
 import CourseDetails from "./CourseDetails";
-import Homepage from "./Homepage";
+import Dashboard from "./Dashboard";
+import AddCourse from "./AddCourse";
+import Header from "./Header"
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <div>
-          <Header />
-
-          <Switch>
-            <Route path="/" exact component={Homepage} />
-            <Route path="/courses/:id" component={CourseDetails} />
-            <Route path="/courses" component={Courses} />
+      <Router>
+        <Fade>
+            <Switch>
+              <div>
+               <Header />
+                <Route path="/" exact component={Dashboard} />
+                  <Switch>
+                    <Route path="/courses/:id" component={CourseDetails} />
+                    <Route path="/courses" component={Courses} />
+                  </Switch>
+              <Route path="/addcourse" component={AddCourse} />
+            </div>
           </Switch>
-
-        </div>
-      </BrowserRouter>
-    </div>
+      </Fade>
+    </Router>
+  </div>
   );
 }
 
