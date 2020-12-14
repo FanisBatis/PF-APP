@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col,Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { API } from "../api";
-import { Card } from "react-bootstrap";
 
 const Courses = (props) => {
 
@@ -15,18 +13,14 @@ const Courses = (props) => {
                 .then((response) => {
                     if (response.ok) {
                         return response.json();
-                    } else {
-                        throw new Error("Something went wrong...");
+                    } 
                     }
                 })
                 .then((data) => {
                     console.log(data);
                     setCourses(data);
                 })
-                .catch((error) => {
-                    console.log(error);
-                });
-        };
+               };
         fetchData();
     }, []);
 
