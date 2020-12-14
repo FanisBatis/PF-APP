@@ -1,0 +1,20 @@
+import { useState } from "react";
+
+
+//---------------------custom hook for simplify input handling----------------------
+export function useSubmit  (initialValue)  {
+  const [value, setValue] = useState(initialValue);
+
+
+  return {
+    value,
+    setValue,
+    reset: () => setValue(""),
+    bind: {
+      value,
+      onChange: evt => {
+        setValue(evt.target.value);
+      }
+    }
+  };
+};
