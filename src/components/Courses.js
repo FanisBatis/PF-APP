@@ -25,11 +25,11 @@ const Courses = () => {
     }, []);
 
     return (
-        <div>
-            <Container>
-                <Row>
+        <div> 
+            <Container><h1 style={{textAlign:"center", marginTop:"20px"}}><u>ALL COURSES</u></h1>
+                <Row style={{textAlign:"center"}}>
                     {courses.map((cour) => (
-                        <Col sm="4" key={cour.id} style={{ marginTop: "20px" }}>
+                        <Col sm="6" key={cour.id} style={{ marginTop: "20px" }}>
                             <Card>
                                 <Card.Img top width="100%" src={cour.imagePath} alt="Card image cap" />
                                 <Card.Body>
@@ -40,7 +40,7 @@ const Courses = () => {
                                     <Button style={{ background: '#F15B41' }}>
                                         <Link style={{ textDecoration: "none", color: '#fff' }}
                                             to={{ pathname: `/courses/${cour.id}` }}>
-                                            Learn more
+                                            View details
                                         </Link>
                                     </Button>
                                 </Card.Body>
