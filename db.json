@@ -44,22 +44,24 @@
     {
       "id": "02",
       "title": "User eXperience (UX) Research",
+      "duration": "4 Fridays and 4 Saturdays",
       "imagePath": "/ui-ux.png",
+      "description": "<p>Do you want to <strong>design products based on opinions or based on evidence</strong>?</p><p>In this course you will learn how <strong>UX research</strong> builds products that users really need, can and want to use!</p>",
       "price": {
-        "normal": 500,
+        "normal": "500",
         "early_bird": 450
       },
       "dates": {
         "start_date": "2020-10-05",
         "end_date": "2020-10-27"
       },
-      "duration": "4 Fridays and 4 Saturdays",
-      "open": true,
+      "open": {
+        "open": false
+      },
       "instructors": [
         "01",
         "02"
-      ],
-      "description": "<p>Do you want to <strong>design products based on opinions or based on evidence</strong>?</p><p>In this course you will learn how <strong>UX research</strong> builds products that users really need, can and want to use!</p>"
+      ]
     },
     {
       "id": "03",

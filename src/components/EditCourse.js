@@ -1,7 +1,7 @@
-import { Container, Form, Button } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
+import { Container, Form, Button, Col } from "react-bootstrap";
 import { API } from "../api";
-import { useHistory, useParams, Redirect } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 const EditCourse = () => {
   const courseId = useParams();
@@ -10,7 +10,6 @@ const EditCourse = () => {
   const [title, setTitle] = useState("");
   const [imagePath, setImagePath] = useState("");
   const [duration, setDuration] = useState("");
-  //const [open, setOpen] = useState(false);
   const [instructors, setInstructors] = useState([]);
   const [description, setDescription] = useState("");
   const [priceNormal, setPriceNormal] = useState("");
@@ -58,7 +57,9 @@ const EditCourse = () => {
         setDateStart(data.dates.start_date);
         setDateEnd(data.dates.end_date);
         setInstructors(data.instructors);
-        //setBookable(open)
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
@@ -106,11 +107,12 @@ const EditCourse = () => {
   };
 
 
+
   return (
     <Container>
       <Form onSubmit={(e) => postCourse(e)}>
         <Form.Group>
-          <Form.Label htmlFor="title">Title:</Form.Label>
+          <Form.Label for="title">Title:</Form.Label>
           <Form.Control
             type="text"
             value={title}
@@ -118,7 +120,7 @@ const EditCourse = () => {
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor="duration">Duration:</Form.Label>
+          <Form.Label for="duration">Duration:</Form.Label>
           <Form.Control
             type="text"
             value={duration}
@@ -126,7 +128,7 @@ const EditCourse = () => {
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor="imagePath">Image Path:</Form.Label>
+          <Form.Label for="imagePath">Image Path:</Form.Label>
           <Form.Control
             type="text"
             value={imagePath}
@@ -134,7 +136,7 @@ const EditCourse = () => {
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label htmlFor="description">Description:</Form.Label>
+          <Form.Label for="description">Description:</Form.Label>
           <Form.Control
             type="textarea"
             name="text"
@@ -143,26 +145,26 @@ const EditCourse = () => {
             onChange={(e) => setDescription(e.target.value)}
           />
           <Form.Group>
-            <Form.Label htmlFor="priceNormal">Start Date:</Form.Label>
+            <Form.Label for="priceNormal">Start Date:</Form.Label>
             <Form.Control type="text"
               value={dateStart}
               onChange={(e) => setDateStart(e.target.value)} />
           </Form.Group>
           <Form.Group>
-            <Form.Label htmlFor="priceNormal">End Date:</Form.Label>
+            <Form.Label for="endDate">End Date:</Form.Label>
             <Form.Control type="text"
               value={dateEnd}
               onChange={(e) => setDateEnd(e.target.value)}
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label htmlFor="priceNormal"
-            >Price Normal:</Form.Label>
+            <Form.Label for="normalPrice"
+            >Normal Price:</Form.Label>
             <Form.Control type="text" value={priceNormal}
               onChange={(e) => setPriceNormal(e.target.value)} />
           </Form.Group>
           <Form.Group>
-            <Form.Label htmlFor="priceEarlyBird">Price Early Bird:</Form.Label>
+            <Form.Label for="priceEarlyBird">Price Early Bird:</Form.Label>
             <Form.Control type="text" value={priceEarlyBird}
               onChange={(e) => setPriceEarlyBird(e.target.value)} />
           </Form.Group>
@@ -195,10 +197,10 @@ const EditCourse = () => {
             />{" "}
           </Form.Label>
         ))}
-        <div>
+        <Col>
           <Button variant="warning" href='/courses' style={{ marginRight: "15px" }}>Cancel</Button>
           <Button type="submit" variant="success">Submit</Button>
-        </div>
+        </Col>
       </Form>
     </Container>
   );

@@ -12,6 +12,7 @@ function CourseDetails() {
   const handleClose = () => setShow();
   const handleShow = () => setShow(true);
 
+  //---- Delete the selected course function -----//
   const deleteCourse = () => {
     fetch(API + "courses/" + courseId.id, {
       method: "DELETE",
@@ -20,13 +21,11 @@ function CourseDetails() {
         if (response.ok) {
           return response.json();
         }
-      })
-      .then((data) => {
-        console.log("Course deleted!!!");
       });
 
   };
 
+  //---- Read selected course and its' information through db.json file (API) ----//
   useEffect(() => {
     const fetchData = () => {
       fetch(API + "courses/" + courseId.id)
@@ -112,7 +111,7 @@ function CourseDetails() {
               </Button>
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title>Delete {course.title} course?</Modal.Title>
+                <Modal.Title>Delete <u>{course.title}</u> course?</Modal.Title>
               </Modal.Header>
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>Cancel</Button>
