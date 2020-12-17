@@ -2,6 +2,7 @@ import React from "react";
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Stats from './Stats';
 import DashboardCourses from './DashboardCourses';
+import "../index.css";
 
 const Dashboard = () => {
   return (

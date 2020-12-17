@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Fade } from 'react-bootstrap';
 import Header from "./Header"
 import Courses from "./Courses";
 import CourseDetails from "./CourseDetails";

@@ -38,7 +38,7 @@ const EditCourse = () => {
     };
     fetchInstructors();
     fetchCourseDetails();
-  }, []);
+  }, );
 
   const fetchCourseDetails = () => {
     fetch(API + "courses/" + courseId.id)

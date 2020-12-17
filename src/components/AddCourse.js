@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect } from "react";
 import { API } from "../api";
 import { Form, Container, Col, Button, InputGroup, FormControl } from "react-bootstrap";
 import { useSubmit } from "../useSubmit";
@@ -25,9 +25,7 @@ const AddCourse = () => {
   };
 
   //------------------------Bookable Checkbox Input-------------
-  const [checkBookable, setBookable] = useState({ open: false });
-  const handleToggle = ({ target }) =>
-    setBookable((s) => ({ ...s, [target.name]: !s[target.name] }));
+  const [checkBookable] = useState({ open: false });
 
   //----------------------Instructors Input-------------------------
   const [instructors, setInstructors] = useState([]);
@@ -98,7 +96,7 @@ const AddCourse = () => {
       }),
     })
       .then((response) => response.json())
-      .then((responseJson) => {
+      .then(() => {
         history.push('/courses');
       })
   };
