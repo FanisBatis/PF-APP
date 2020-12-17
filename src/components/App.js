@@ -1,7 +1,6 @@
 
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import {Fade} from 'react-bootstrap';
 import Courses from "./Courses";
 import CourseDetails from "./CourseDetails";
 import Dashboard from "./Dashboard";
@@ -13,7 +12,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Fade>
+        <div>
             <Switch>
               <div>
                <Header />
@@ -26,7 +25,7 @@ function App() {
               <Route path="/edit-course" component={EditCourse} />
             </div>
           </Switch>
-      </Fade>
+      </div>
     </Router>
   </div>
   );
