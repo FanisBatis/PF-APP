@@ -21,8 +21,8 @@ function App() {
                     <Route path="/courses/:id" component={CourseDetails} />
                     <Route path="/courses" component={Courses} />
                   </Switch>
-              <Route path="/addcourse" component={AddCourse} />
-              <Route path="/edit-course" component={EditCourse} />
+                <Route path="/edit-course/:id" component={EditCourse} />
+                <Route path="/add-course" component={AddCourse} />
             </div>
           </Switch>
       </div>
