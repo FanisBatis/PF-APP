@@ -3,14 +3,14 @@ import { Table, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { API } from "../api";
 import { CheckCircleFillIcon } from '@primer/octicons-react';
-
+import './Css Comp/Dashboard.css';
 
 const DashboardCourses = (props) => {
   const [courses, setCourses] = useState([]);
   //--------import courses to dashboard table from db.json----------------
   useEffect(() => {
     const fetchData = () => {
-      fetch(API + "courses")
+      fetch(API + "courses/?_limit=5")
         .then((response) => {
           if (response.ok) {
             return response.json();
@@ -21,13 +21,13 @@ const DashboardCourses = (props) => {
           setCourses(data);
         })
     };
-
     fetchData();
   }, []);
 
   return (
     <Table hover style={{ marginTop: "50px" }}>
       <thead>
+        <tr style={{backgroundColor:'lightgrey', border:'1px'}}><th></th><th><i>Last 5 course</i></th><th></th><th></th><th></th><th></th></tr>
         <tr>
           <th></th>
           <th>Title</th>
@@ -42,20 +42,21 @@ const DashboardCourses = (props) => {
           <tr key={cour.id}>
             <th scope="row"></th>
             <td>{cour.title}</td>
-            <td style={{ textAlign: 'center' }}><CheckCircleFillIcon size={16} className="table-icon-check" /> </td>
+            <td style={{ textAlign: 'center', color: "maroon" }}><CheckCircleFillIcon size={16} className="table-icon-check" /> </td>
 
             <td>{cour.price?.normal} €</td>
             <td>
               {cour.dates?.start_date} - {cour.dates?.end_date}
             </td>
             <td>
-              <Button style={{ background: '#F15B41' }}>
-                <Link style={{ textDecoration: "none", color: '#fff' }} to={{ pathname: `/courses/${cour.id}` }}> Learn more{" "}
+              <Button style={{ background: '#baa1a2', border: '10px' }}>
+                <Link style={{ textDecoration: "none", color: '#773c3d', transform: 'translateY(4px)' }} to={{ pathname: `/courses/${cour.id}` }}> Learn more{" "}
                 </Link>
               </Button>
             </td>
           </tr>
-        ))}
+        ))
+        }
       </tbody>
     </Table>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect } from "react";
 import { API } from "../api";
 import { Form, Container, Col, Button, InputGroup, FormControl } from "react-bootstrap";
 import { useSubmit } from "../useSubmit";
@@ -21,13 +21,12 @@ const AddCourse = () => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     resetAllInputs();
-    alert(`You have submitted a new course named " ${title}" `);
+   
+      alert("Course added!")
   };
-
+ 
   //------------------------Bookable Checkbox Input-------------
-  const [checkBookable, setBookable] = useState({ open: false });
-  const handleToggle = ({ target }) =>
-    setBookable((s) => ({ ...s, [target.name]: !s[target.name] }));
+  const [checkBookable] = useState({ open: false });
 
   //----------------------Instructors Input-------------------------
   const [instructors, setInstructors] = useState([]);
@@ -55,8 +54,6 @@ const AddCourse = () => {
       setInstructors([...instructors, value]);
     }
   };
-
-
 
   //------------------reset/delete (useInput)
   const resetAllInputs = () => {
@@ -98,7 +95,7 @@ const AddCourse = () => {
       }),
     })
       .then((response) => response.json())
-      .then((responseJson) => {
+      .then(() => {
         history.push('/courses');
       })
   };
@@ -110,7 +107,7 @@ const AddCourse = () => {
     <Container>
       <Form onSubmit={handleSubmit}>
         <Form.Group >
-        <h1 style={{textAlign:"center", marginTop:"20px"}}><u>ADD COURSE</u></h1>
+          <h1 style={{ textAlign: "center", marginTop: "20px" }}><u>ADD COURSE</u></h1>
           {/* ----------------------TITLE---------------------------- */}
           <Form.Group>
             <Col>
@@ -147,7 +144,7 @@ const AddCourse = () => {
           {/* ----------------------BOOCKABLE---------------------------- */}
           <Form.Group controlId="formBasicCheckbox" >
             <Col>
-              <Form.Label for="boockable"></Form.Label>
+              <Form.Label for="bookable"></Form.Label>
               <Form.Check type="checkbox" label="Bookable" />
             </Col>
           </Form.Group>
@@ -205,11 +202,11 @@ const AddCourse = () => {
             <Form.Row>
               <Col>
                 <Form.Label for="priceNormal">Early Bird:</Form.Label>
-                <InputGroup {...bindEarlyBird}>
+                <InputGroup  {...bindEarlyBird}>
                   <InputGroup.Prepend>
                     <InputGroup.Text>€</InputGroup.Text>
                   </InputGroup.Prepend>
-                  <FormControl aria-label="Amount (to the nearest dollar)" />
+                  <FormControl type="number" />
                   <InputGroup.Append>
                     <InputGroup.Text>.00</InputGroup.Text>
                   </InputGroup.Append>
@@ -222,7 +219,7 @@ const AddCourse = () => {
                   <InputGroup.Prepend>
                     <InputGroup.Text>€</InputGroup.Text>
                   </InputGroup.Prepend>
-                  <FormControl aria-label="Amount (to the nearest dollar)" />
+                  <FormControl type="number" />
                   <InputGroup.Append>
                     <InputGroup.Text>.00</InputGroup.Text>
                   </InputGroup.Append>
@@ -233,9 +230,9 @@ const AddCourse = () => {
 
           {/* ----------------------SUBMIT BUTTON---------------------------- */}
           <Col >
-            <Button variant="primary" type="submit">Add Course</Button>
+            <Button onClick={handleSubmit} style={{ background: "brown", border: 'none' }}>
+              Add course</Button>
           </Col>
-
         </Form.Group>
       </Form>
     </Container>

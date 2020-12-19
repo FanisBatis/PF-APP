@@ -109,7 +109,7 @@ const EditCourse = () => {
 
 
   return (
-    <Container>
+    <Container style={{marginTop:'20px'}}>
       <Form onSubmit={(e) => postCourse(e)}>
         <Form.Group>
           <Form.Label for="title">Title:</Form.Label>
@@ -160,12 +160,12 @@ const EditCourse = () => {
           <Form.Group>
             <Form.Label for="normalPrice"
             >Normal Price:</Form.Label>
-            <Form.Control type="text" value={priceNormal}
+            <Form.Control type="number" value={priceNormal}
               onChange={(e) => setPriceNormal(e.target.value)} />
           </Form.Group>
           <Form.Group>
             <Form.Label for="priceEarlyBird">Price Early Bird:</Form.Label>
-            <Form.Control type="text" value={priceEarlyBird}
+            <Form.Control type="number" value={priceEarlyBird}
               onChange={(e) => setPriceEarlyBird(e.target.value)} />
           </Form.Group>
         </Form.Group>
@@ -198,8 +198,8 @@ const EditCourse = () => {
           </Form.Label>
         ))}
         <Col>
-          <Button variant="warning" href='/courses' style={{ marginRight: "15px" }}>Cancel</Button>
-          <Button type="submit" variant="success">Submit</Button>
+          <Button variant="warning" href='/courses' style={{ marginRight: "15px", marginBottom:"10px" }}>Cancel</Button>
+          <Button type="submit" style={{ background: "#1a6640", border:'none', marginBottom:"10px"  }}>Submit</Button>
         </Col>
       </Form>
     </Container>

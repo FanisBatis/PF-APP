@@ -25,7 +25,9 @@
     {
       "id": "01",
       "title": "Certified Scrum Master®",
+      "duration": "2 days",
       "imagePath": "/scrum.png",
+      "description": "<p>This <strong>innovative Scrum class</strong> won’t be like any other you’ve heard of, with an unconventional focus on the deeply human foundations at work in teams building stuff together.</p><p>This two-day seminar is designed to give aspiring and beginning ScrumMasters and team members the foundations of Scrum and Agile practice. Chock full of exercises, the seminar creates lasting memories and learnings you can carry through into your team so you can avoid common Agile pitfalls. The seminar is designed and taught by <strong>Jim Coplien</strong>, <strong>author of Organizational Patterns and Lean/Agile Process and Architecture Coach</strong>.</p>",
       "price": {
         "normal": 1100,
         "early_bird": 800
@@ -34,12 +36,12 @@
         "start_date": "2019-09-27",
         "end_date": "2019-09-28"
       },
-      "duration": "2 days",
-      "open": true,
+      "open": {
+        "open": false
+      },
       "instructors": [
         "01"
-      ],
-      "description": "<p>This <strong>innovative Scrum class</strong> won’t be like any other you’ve heard of, with an unconventional focus on the deeply human foundations at work in teams building stuff together.</p><p>This two-day seminar is designed to give aspiring and beginning ScrumMasters and team members the foundations of Scrum and Agile practice. Chock full of exercises, the seminar creates lasting memories and learnings you can carry through into your team so you can avoid common Agile pitfalls. The seminar is designed and taught by <strong>Jim Coplien</strong>, <strong>author of Organizational Patterns and Lean/Agile Process and Architecture Coach</strong>.</p>"
+      ]
     },
     {
       "id": "02",

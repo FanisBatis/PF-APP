@@ -37,8 +37,8 @@ const Courses = () => {
                                         Title: {cour.title}
                                     </Card.Subtitle>
                                     <Card.Text className="color-text">Price: {cour.price.normal} €</Card.Text>
-                                    <Button style={{ background: '#F15B41' }}>
-                                        <Link style={{ textDecoration: "none", color: '#fff' }}
+                                    <Button style={{ background: '#baa1a2', border: '10px' }}>
+                                        <Link style={{ textDecoration: "none", color: '#773c3d', transform: 'translateY(4px)' }}
                                             to={{ pathname: `/courses/${cour.id}` }}>
                                             View details
                                         </Link>

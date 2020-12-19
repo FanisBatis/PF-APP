@@ -63,7 +63,7 @@ function CourseDetails() {
       <Container>
         <Row>
           <Col>
-            <img src={course.imagePath} />
+            <img src={course.imagePath} alt={"Icon of course"}/>
           </Col>
         </Row>
         <Row style={{ marginTop: "20px" }}>
@@ -99,14 +99,14 @@ function CourseDetails() {
                 <Card.Text>
                   Birthday: {inst.dob}
                 </Card.Text>
-                <a href="https://www.linkedin.com/sample" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/sample" target="_blank" rel="noreferrer">LinkedIn</a>
               </Card>
             </Col>
           )}
         </Row>
         <Row style={{ marginBottom: '30px', marginTop: '30px' }}>
           <Col>
-            <Button onClick={handleShow} style={{ background: "red", width: '80px', marginRight: '5px' }}>
+            <Button onClick={handleShow} style={{ background:"brown", width: '80px', marginRight: '5px', border:'none' }}>
               Delete
               </Button>
             <Modal show={show} onHide={handleClose}>
@@ -118,9 +118,9 @@ function CourseDetails() {
                 <Button variant="primary" onClick={deleteCourse}><Link to='/courses' style={{ color: "white", textDecoration: "none" }}>OK!</Link></Button>
               </Modal.Footer>
             </Modal>
-            <Button style={{ background: "green", width: '80px' }}>
-              <Link to={{ pathname: `/edit-course/${course.id}` }} style={{ color: "#fff" }}>Edit</Link>
-            </Button>
+            <Link to={{ pathname: `/edit-course/${course.id}` }} style={{ color: "#fff" }}>
+              <Button style={{ background: "#1a6640", width: '80px', border:'none' }}>Edit</Button>
+            </Link>
           </Col>
         </Row>
       </Container>
