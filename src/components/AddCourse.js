@@ -55,8 +55,6 @@ const AddCourse = () => {
     }
   };
 
-
-
   //------------------reset/delete (useInput)
   const resetAllInputs = () => {
     resetTitle();

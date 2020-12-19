@@ -104,63 +104,6 @@
       "instructors": [
         "01"
       ]
-    },
-    {
-      "title": "asdasf",
-      "duration": "",
-      "imagePath": "",
-      "description": "",
-      "price": {
-        "normal": "",
-        "early_bird": ""
-      },
-      "dates": {
-        "start_date": "",
-        "end_date": ""
-      },
-      "open": {
-        "open": false
-      },
-      "instructors": [],
-      "id": "ukgDTOk"
-    },
-    {
-      "title": "fhgkgh",
-      "duration": "",
-      "imagePath": "",
-      "description": "",
-      "price": {
-        "normal": "",
-        "early_bird": ""
-      },
-      "dates": {
-        "start_date": "",
-        "end_date": ""
-      },
-      "open": {
-        "open": false
-      },
-      "instructors": [],
-      "id": "u_m_9yU"
-    },
-    {
-      "title": "gfjghjhgj",
-      "duration": "",
-      "imagePath": "",
-      "description": "",
-      "price": {
-        "normal": "",
-        "early_bird": ""
-      },
-      "dates": {
-        "start_date": "",
-        "end_date": ""
-      },
-      "open": {
-        "open": false
-      },
-      "instructors": [],
-      "id": "L8abRZf"
     }
   ],
   "instructors": [

@@ -10,7 +10,7 @@ const DashboardCourses = (props) => {
   //--------import courses to dashboard table from db.json----------------
   useEffect(() => {
     const fetchData = () => {
-      fetch(API + "courses")
+      fetch(API + "courses/?_limit=5")
         .then((response) => {
           if (response.ok) {
             return response.json();
@@ -27,6 +27,7 @@ const DashboardCourses = (props) => {
   return (
     <Table hover style={{ marginTop: "50px" }}>
       <thead>
+        <tr style={{backgroundColor:'lightgrey', border:'1px'}}><th></th><th><i>Last 5 course</i></th><th></th><th></th><th></th><th></th></tr>
         <tr>
           <th></th>
           <th>Title</th>
