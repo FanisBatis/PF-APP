@@ -57,7 +57,7 @@ function CourseDetails() {
         });
     };
     fetchData();
-  }, );
+  }, []);
   return (
     <div style={{ textAlign: "center", marginTop: "20px" }}>
       <Container>
@@ -106,7 +106,7 @@ function CourseDetails() {
         </Row>
         <Row style={{ marginBottom: '30px', marginTop: '30px' }}>
           <Col>
-            <Button onClick={handleShow} style={{ background: "red", width: '80px', marginRight: '5px' }}>
+            <Button onClick={handleShow} style={{ background:"brown", width: '80px', marginRight: '5px', border:'none' }}>
               Delete
               </Button>
             <Modal show={show} onHide={handleClose}>
@@ -119,7 +119,7 @@ function CourseDetails() {
               </Modal.Footer>
             </Modal>
             <Link to={{ pathname: `/edit-course/${course.id}` }} style={{ color: "#fff" }}>
-              <Button style={{ background: "green", width: '80px' }}>Edit</Button>
+              <Button style={{ background: "#1a6640", width: '80px', border:'none' }}>Edit</Button>
             </Link>
           </Col>
         </Row>

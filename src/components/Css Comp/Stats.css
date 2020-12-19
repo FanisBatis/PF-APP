@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+body {
+	margin: 10px;
+}
+
+#container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20vh;
+	height: 20vh;
+	position:relative;
+}
+
+.circle {
+	width:  20vh;
+	height: 20vh;
+	position: absolute;
+    border-radius: 90%;
+    
+}
+
+
+
+#one {
+	background-color: rgba(54, 46, 46, 0.021);
+	font-size: 17px;
+	font-family: Roboto, Arial, sans-serif;
+	letter-spacing: 1.5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgba(189, 20, 20, 0.842);
+	font-weight: bold;
+    transition: 1s;
+    text-align: center;
+    text-anchor: middle;
+    background: radial-gradient(transparent 50%, rgb(196, 194, 194));
+ 
+    
+}
+
+#two {
+	background-color: rgb(215, 223, 215);
+	transition: 1s;
+	opacity: 0.5;
+}
+
+#three {
+	background-color: rgb(184, 94, 94);
+	transition: 1s;
+	opacity: 0.5;
+}
+
+#four {
+	background-color: rgba(68, 63, 63, 0.952);
+	transition: 1s;
+	opacity: 0.5;
+}
+#five {
+	background-color: rgb(197, 104, 104);
+	transition: 1s;
+	opacity: 0.5;
+}
+
+#cc {
+	position:relative;
+	width: 20vh;
+	height: 20vh;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#cc:hover #two {
+	transform: translate(0px, 75px);
+}
+#cc:hover #three {
+	transform: translate(0px, -75px);
+}
+#cc:hover #four {
+	transform: translate(75px, 0px);
+}
+#cc:hover #five {
+	transform: translate(-75px, 0px);
+}
+
+#mb {
+	position: absolute;
+	font-family: "Oswald", sans-serif;
+	letter-spacing: 0.5px;
+	bottom: 0px;
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+	background-color: #3B3A6D;
+	color: white;
+}
+
+#mb a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0px;
+}
+
+#mb p {
+	padding: 5px;
+	margin: 0px;
+}
+

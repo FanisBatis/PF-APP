@@ -1,18 +1,34 @@
 import React from "react";
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import Stats from './Stats';
 import DashboardCourses from './DashboardCourses';
-import "../index.css";
+import './Css Comp/Dashboard.css';
+
 
 const Dashboard = () => {
+
   return (
-    <div>
-      <Jumbotron fluid className='mt-4 text-center'>
-        <h1>Welcome to Code.Hub Dashboard!</h1>
-        <h5>Manage everything and have fun!</h5>
-      </Jumbotron>
-      <Stats /> {/* show codeHub statistics via Stats component */}
+    <div class="looo">
+      <div class="container" width="10px">
+        <div class="jumbotron">
+          <div class="animated-title">
+            <div class="text-top">
+              <div>
+                <span>Welcome to </span>
+                <span>Code.Hub Dashboard!</span>
+              </div>
+            </div>
+            <div class="text-bottom">
+              <div>
+                <span>Manage everything</span>
+                <span>and have fun!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Stats /> {/* show codeHub statistics via Stats component */}
+      </div>
       <DashboardCourses /> {/* show courses  via DashboardCourses component */}
+
     </div>
   )
 }
