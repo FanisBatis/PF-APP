@@ -25,24 +25,22 @@
     {
       "id": "02",
       "title": "User eXperience (UX) Research",
-      "duration": "4 Fridays and 4 Saturdays",
       "imagePath": "/ui-ux.png",
-      "description": "<p>Do you want to <strong>design products based on opinions or based on evidence</strong>?</p><p>In this course you will learn how <strong>UX research</strong> builds products that users really need, can and want to use!</p>",
       "price": {
-        "normal": "500",
+        "normal": 500,
         "early_bird": 450
       },
       "dates": {
         "start_date": "2020-10-05",
         "end_date": "2020-10-27"
       },
-      "open": {
-        "open": false
-      },
+      "duration": "4 Fridays and 4 Saturdays",
+      "open": false,
       "instructors": [
         "01",
         "02"
-      ]
+      ],
+      "description": "<p>Do you want to <strong>design products based on opinions or based on evidence</strong>?</p><p>In this course you will learn how <strong>UX research</strong> builds products that users really need, can and want to use!</p>"
     },
     {
       "id": "03",
@@ -75,7 +73,7 @@
       },
       "dates": {
         "start_date": "2018-10-19",
-        "end_date": "2018-10-10"
+        "end_date": "2018-10-12"
       },
       "open": {
         "open": false
@@ -83,46 +81,6 @@
       "instructors": [
         "01"
       ]
-    },
-    {
-      "title": "",
-      "duration": "",
-      "imagePath": "",
-      "description": "",
-      "price": {
-        "normal": "",
-        "early_bird": ""
-      },
-      "dates": {
-        "start_date": "",
-        "end_date": ""
-      },
-      "open": {
-        "open": false
-      },
-      "instructors": [],
-      "id": "U9TXzHo"
-    },
-    {
-      "title": "werwer",
-      "duration": "",
-      "imagePath": "",
-      "description": "",
-      "price": {
-        "normal": "",
-        "early_bird": ""
-      },
-      "dates": {
-        "start_date": "",
-        "end_date": ""
-      },
-      "open": {
-        "open": false
-      },
-      "instructors": [
-        "01"
-      ],
-      "id": "ZEzrz0C"
     }
   ],
   "instructors": [
