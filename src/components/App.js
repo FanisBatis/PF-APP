@@ -11,16 +11,14 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <div>
-          <Header />
+        <Header />
+        <Switch>
           <Route path="/" exact component={Dashboard} />
-          <Switch>
-            <Route path="/courses/:id" component={CourseDetails} />
-            <Route path="/courses" component={Courses} />
-          </Switch>
+          <Route path="/courses/:id" component={CourseDetails} />
+          <Route path="/courses" component={Courses} />
           <Route path="/edit-course/:id" component={EditCourse} />
           <Route path="/add-course" component={AddCourse} />
-        </div>
+        </Switch>
       </BrowserRouter>
     </div>
   );

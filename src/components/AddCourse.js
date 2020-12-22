@@ -21,10 +21,9 @@ const AddCourse = () => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     resetAllInputs();
-   
-      alert("Course added!")
+    alert("Course added!")
   };
- 
+
   //------------------------Bookable Checkbox Input-------------
   const [checkBookable] = useState({ open: false });
 
