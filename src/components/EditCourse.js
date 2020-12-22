@@ -17,9 +17,7 @@ const EditCourse = () => {
   const [dateStart, setDateStart] = useState("");
   const [dateEnd, setDateEnd] = useState("");
 
-  const [checkBookable, setBookable] = useState({
-    open: false,
-  });
+  const [checkBookable, setBookable] = useState({ open: false, });
 
   const handleToggle = ({ target }) =>
     setBookable((s) => ({ ...s, [target.name]: !s[target.name] }));
@@ -90,11 +88,12 @@ const EditCourse = () => {
       }),
     })
       .then((response) => response.json())
-      .then((responseJson) => {
+      .then(() => {
         history.push("/courses");
       });
   };
 
+  //-----instructor selection------
   const onCheckedChanged = (e) => {
     const value = e.target.value;
     if (instructors.includes(value)) {

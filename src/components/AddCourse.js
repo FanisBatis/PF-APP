@@ -54,7 +54,7 @@ const AddCourse = () => {
     }
   };
 
-  //------------------reset/delete (useInput)
+  //------------------reset/delete (useSubmit)
   const resetAllInputs = () => {
     resetTitle();
     resetDuration();
