@@ -23,27 +23,6 @@
   ],
   "courses": [
     {
-      "id": "01",
-      "title": "Certified Scrum Master®",
-      "duration": "2 days",
-      "imagePath": "/scrum.png",
-      "description": "<p>This <strong>innovative Scrum class</strong> won’t be like any other you’ve heard of, with an unconventional focus on the deeply human foundations at work in teams building stuff together.</p><p>This two-day seminar is designed to give aspiring and beginning ScrumMasters and team members the foundations of Scrum and Agile practice. Chock full of exercises, the seminar creates lasting memories and learnings you can carry through into your team so you can avoid common Agile pitfalls. The seminar is designed and taught by <strong>Jim Coplien</strong>, <strong>author of Organizational Patterns and Lean/Agile Process and Architecture Coach</strong>.</p>",
-      "price": {
-        "normal": 1100,
-        "early_bird": 800
-      },
-      "dates": {
-        "start_date": "2019-09-27",
-        "end_date": "2019-09-28"
-      },
-      "open": {
-        "open": false
-      },
-      "instructors": [
-        "01"
-      ]
-    },
-    {
       "id": "02",
       "title": "User eXperience (UX) Research",
       "duration": "4 Fridays and 4 Saturdays",
@@ -104,6 +83,46 @@
       "instructors": [
         "01"
       ]
+    },
+    {
+      "title": "",
+      "duration": "",
+      "imagePath": "",
+      "description": "",
+      "price": {
+        "normal": "",
+        "early_bird": ""
+      },
+      "dates": {
+        "start_date": "",
+        "end_date": ""
+      },
+      "open": {
+        "open": false
+      },
+      "instructors": [],
+      "id": "U9TXzHo"
+    },
+    {
+      "title": "werwer",
+      "duration": "",
+      "imagePath": "",
+      "description": "",
+      "price": {
+        "normal": "",
+        "early_bird": ""
+      },
+      "dates": {
+        "start_date": "",
+        "end_date": ""
+      },
+      "open": {
+        "open": false
+      },
+      "instructors": [
+        "01"
+      ],
+      "id": "ZEzrz0C"
     }
   ],
   "instructors": [

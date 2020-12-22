@@ -25,20 +25,20 @@ const Courses = () => {
     }, []);
 
     return (
-        <div> 
-            <Container><h1 style={{textAlign:"center", marginTop:"20px"}}><u>ALL COURSES</u></h1>
-                <Row style={{textAlign:"center"}}>
+        <div>
+            <Container><h1 style={{ textAlign: "center", marginTop: "20px" }}><u>ALL COURSES</u></h1>
+                <Row style={{ textAlign: "center" }}>
                     {courses.map((cour) => (
                         <Col sm="6" key={cour.id} style={{ marginTop: "20px" }}>
                             <Card>
-                                <Card.Img top width="100%" src={cour.imagePath} alt="Card image cap" />
+                                <Card.Img top width="100%" src={cour.imagePath} alt="Icon of course" />
                                 <Card.Body>
                                     <Card.Subtitle tag="h6" className="mb-2 color-text">
                                         Title: {cour.title}
                                     </Card.Subtitle>
                                     <Card.Text className="color-text">Price: {cour.price.normal} €</Card.Text>
                                     <Button style={{ background: '#baa1a2', border: '10px' }}>
-                                        <Link style={{ textDecoration: "none", color: '#773c3d', transform: 'translateY(4px)' }}
+                                        <Link style={{ textDecoration: "none", color: 'darkred', transform: 'translateY(4px)' }}
                                             to={{ pathname: `/courses/${cour.id}` }}>
                                             View details
                                         </Link>

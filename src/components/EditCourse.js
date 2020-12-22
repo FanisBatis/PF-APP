@@ -109,7 +109,7 @@ const EditCourse = () => {
 
 
   return (
-    <Container style={{marginTop:'20px'}}>
+    <Container style={{ marginTop: '20px' }}>
       <Form onSubmit={(e) => postCourse(e)}>
         <Form.Group>
           <Form.Label for="title">Title:</Form.Label>
@@ -198,8 +198,8 @@ const EditCourse = () => {
           </Form.Label>
         ))}
         <Col>
-          <Button variant="warning" href='/courses' style={{ marginRight: "15px", marginBottom:"10px" }}>Cancel</Button>
-          <Button type="submit" style={{ background: "#1a6640", border:'none', marginBottom:"10px"  }}>Submit</Button>
+          <Button variant="warning" href='/courses' style={{ marginRight: "15px", marginBottom: "10px" }}>Cancel</Button>
+          <Button type="submit" style={{ background: "#1a6640", border: 'none', marginBottom: "10px" }}>Submit</Button>
         </Col>
       </Form>
     </Container>

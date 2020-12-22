@@ -5,9 +5,9 @@ import { API } from "../api";
 import { CheckCircleFillIcon } from '@primer/octicons-react';
 import './Css Comp/Dashboard.css';
 
-const DashboardCourses = (props) => {
+//--------import courses to dashboard table from db.json----------------
+const DashboardCourses = () => {
   const [courses, setCourses] = useState([]);
-  //--------import courses to dashboard table from db.json----------------
   useEffect(() => {
     const fetchData = () => {
       fetch(API + "courses/?_limit=5")
@@ -27,7 +27,7 @@ const DashboardCourses = (props) => {
   return (
     <Table hover style={{ marginTop: "50px" }}>
       <thead>
-        <tr style={{backgroundColor:'lightgrey', border:'1px'}}><th></th><th><i>Last 5 course</i></th><th></th><th></th><th></th><th></th></tr>
+        <tr style={{ backgroundColor: 'lightgrey', border: '1px' }}><th></th><th><i>First 5 courses</i></th><th></th><th></th><th></th><th></th></tr>
         <tr>
           <th></th>
           <th>Title</th>
@@ -50,7 +50,7 @@ const DashboardCourses = (props) => {
             </td>
             <td>
               <Button style={{ background: '#baa1a2', border: '10px' }}>
-                <Link style={{ textDecoration: "none", color: '#773c3d', transform: 'translateY(4px)' }} to={{ pathname: `/courses/${cour.id}` }}> Learn more{" "}
+                <Link style={{ textDecoration: "none", color: 'darkred', transform: 'translateY(4px)' }} to={{ pathname: `/courses/${cour.id}` }}> Learn more{" "}
                 </Link>
               </Button>
             </td>
